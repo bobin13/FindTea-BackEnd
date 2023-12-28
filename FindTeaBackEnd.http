@@ -1,0 +1,6 @@
+@FindTeaBackEnd_HostAddress = http://localhost:5081
+
+GET {{FindTeaBackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
