@@ -10,9 +10,9 @@ namespace FindTeaBackEnd.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class MainController : ControllerBase
+    public class StoreController : ControllerBase
     {
-        DBHandler db = new DBHandler();
+        DB db = new();
 
         [HttpGet("find")]
         public IActionResult FindStoresByCity([FromQuery] string city)

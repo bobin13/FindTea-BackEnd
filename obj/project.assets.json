@@ -31,6 +31,19 @@
           }
         }
       },
+      "BCrypt.Net/0.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/BCrypt.Net.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net35/BCrypt.Net.dll": {
+            "related": ".XML"
+          }
+        }
+      },
       "DnsClient/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -452,6 +465,19 @@
         "lib/netstandard2.0/AWSSDK.SecurityToken.xml",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "BCrypt.Net/0.1.0": {
+      "sha512": "sST2w361Dxt9GGMfpOTiK50wXGV64Ybb1hiX3xjEWnhVYZNF43NuySGwADJa7X1R+bA53NsFR+tuDxcYiJeIOA==",
+      "type": "package",
+      "path": "bcrypt.net/0.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net.0.1.0.nupkg.sha512",
+        "bcrypt.net.nuspec",
+        "lib/net35/BCrypt.Net.XML",
+        "lib/net35/BCrypt.Net.dll"
       ]
     },
     "DnsClient/1.6.1": {
@@ -1222,25 +1248,26 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BCrypt.Net >= 0.1.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.0",
       "MongoDB.Driver >= 2.23.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-    "/Users/bobin13/.nuget/packages/": {}
+    "C:\\Users\\bahwi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bobin13/Documents/VS Code Projects/FindTeaBackEnd/FindTeaBackEnd.csproj",
+      "projectUniqueName": "C:\\Users\\bahwi\\OneDrive\\Documents\\VS Code Projects\\FindTeaBackEnd\\FindTeaBackEnd.csproj",
       "projectName": "FindTeaBackEnd",
-      "projectPath": "/Users/bobin13/Documents/VS Code Projects/FindTeaBackEnd/FindTeaBackEnd.csproj",
-      "packagesPath": "/Users/bobin13/.nuget/packages/",
-      "outputPath": "/Users/bobin13/Documents/VS Code Projects/FindTeaBackEnd/obj/",
+      "projectPath": "C:\\Users\\bahwi\\OneDrive\\Documents\\VS Code Projects\\FindTeaBackEnd\\FindTeaBackEnd.csproj",
+      "packagesPath": "C:\\Users\\bahwi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bahwi\\OneDrive\\Documents\\VS Code Projects\\FindTeaBackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bobin13/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\bahwi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1258,12 +1285,21 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "BCrypt.Net": {
+            "target": "Package",
+            "version": "[0.1.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.0, )"
@@ -1296,8 +1332,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
