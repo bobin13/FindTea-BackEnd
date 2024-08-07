@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FindTeaBackEnd.Database;
 using FindTeaBackEnd.Handlers;
+using FindTeaBackEnd.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FindTeaBackEnd.Controllers
@@ -11,13 +13,22 @@ namespace FindTeaBackEnd.Controllers
     [Route("api/[controller]")]
     public class TestController : ControllerBase
     {
+
+        readonly AppDb db = new();
+
         [HttpGet]
-        public IActionResult Test()
+        public IActionResult GetStoresByCity(string cityQuery)
         {
-            string salt = Encrypt.GenerateSalt(13);
-            string hash = Encrypt.GenerateHash("salty", "bobin1314ist");
-            Boolean b = Encrypt.CheckHash("saltbobin1314ist", hash);
-            return Ok(salt);
+            // string salt = Encrypt.GenerateSalt(13);
+            // string hash = Encrypt.GenerateHash(salt, "bobin1314ist");
+            // Boolean b = Encrypt.CheckHash(salt + "bobin1314ist", hash);
+            // return Ok(b);
+            Console.WriteLine(cityQuery);
+            DbSQL db = new();
+            string temp = db.GetStoresByCity(cityQuery);
+            return Ok(temp);
         }
+
+
     }
 }

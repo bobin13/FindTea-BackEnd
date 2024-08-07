@@ -9,19 +9,22 @@ namespace FindTeaBackEnd.Models
 {
     public class Store
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public required string id { get; set; }
-        public string name { get; set; }
-        public string city { get; set; }
-        public string address { get; set; }
-        public string rating { get; set; }
+        public int id { get; set; }
+        public string? store_name { get; set; }
+        public string? city { get; set; }
+        public string? address { get; set; }
+        public float? rating { get; set; }
 
-        public Store(string name, string address, string city, string rating = "0")
+        public Store()
         {
-            this.name = name;
-            this.address = address;
+
+        }
+        public Store(int id, string store_name, string address, string city, float rating = 0)
+        {
+            this.id = id;
+            this.store_name = store_name;
             this.city = city;
+            this.address = address;
             this.rating = rating;
         }
     }
