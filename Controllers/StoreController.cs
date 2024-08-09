@@ -36,6 +36,9 @@ namespace FindTeaBackEnd.Controllers
             // string hash = Encrypt.GenerateHash(salt, "bobin1314ist");
             // Boolean b = Encrypt.CheckHash(salt + "bobin1314ist", hash);
             // return Ok(b);
+            if (cityQuery == null)
+                return Ok(db.Stores.ToList());
+
             var stores = db.Stores.Where(e => e.city == cityQuery);
             return Ok(stores);
         }

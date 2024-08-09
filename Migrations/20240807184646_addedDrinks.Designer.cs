@@ -2,6 +2,7 @@
 using FindTeaBackEnd.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FindTeaBackEnd.Migrations
 {
     [DbContext(typeof(AppDb))]
-    partial class AppDbModelSnapshot : ModelSnapshot
+    [Migration("20240807184646_addedDrinks")]
+    partial class addedDrinks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,28 +51,6 @@ namespace FindTeaBackEnd.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Drinks");
-                });
-
-            modelBuilder.Entity("FindTeaBackEnd.Models.Rating", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
-
-                    b.Property<int>("drink_id")
-                        .HasColumnType("integer");
-
-                    b.Property<float>("drink_rating")
-                        .HasColumnType("real");
-
-                    b.Property<int>("store_id")
-                        .HasColumnType("integer");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("FindTeaBackEnd.Models.Store", b =>

@@ -10,10 +10,9 @@ namespace FindTeaBackEnd.Database
     public class AppDb : DbContext
     {
 
-        // public AppDb(IConfiguration configuration)
-        // {
-        //     this.configuration = configuration;
-        // }
+        public DbSet<Store> Stores { get; set; }
+        public DbSet<Drink> Drinks { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,6 +20,6 @@ namespace FindTeaBackEnd.Database
             optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=;Database=tims");
         }
 
-        public DbSet<Store> Stores { get; set; }
+
     }
 }

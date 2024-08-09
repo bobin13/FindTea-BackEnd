@@ -19,10 +19,7 @@ namespace FindTeaBackEnd.Controllers
         [HttpGet]
         public IActionResult GetStoresByCity(string cityQuery)
         {
-            // string salt = Encrypt.GenerateSalt(13);
-            // string hash = Encrypt.GenerateHash(salt, "bobin1314ist");
-            // Boolean b = Encrypt.CheckHash(salt + "bobin1314ist", hash);
-            // return Ok(b);
+
             Console.WriteLine(cityQuery);
             DbSQL db = new();
             string temp = db.GetStoresByCity(cityQuery);
