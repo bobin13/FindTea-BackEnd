@@ -10,6 +10,7 @@ namespace FindTeaBackEnd.Models
         public int id { get; set; }
         public int store_id { get; set; }
         public int drink_id { get; set; }
+        public int user_id { get; set; }
         public float drink_rating { get; set; }
     }
 }

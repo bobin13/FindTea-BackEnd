@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FindTeaBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99959a59c9f4801582c02288983d419bcb31aa81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+017a22f05aff315bf73364dbb5db9d446fff537f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FindTeaBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FindTeaBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

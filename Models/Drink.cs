@@ -14,5 +14,7 @@ namespace FindTeaBackEnd.Models
         public float drink_rating { get; set; }
         public bool is_registered { get; set; }
 
+        public List<Rating> ratings { get; set; }
+
     }
 }
