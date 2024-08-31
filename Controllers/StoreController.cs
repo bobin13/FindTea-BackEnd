@@ -29,6 +29,8 @@ namespace FindTeaBackEnd.Controllers
             var stores = db.Stores.Where(e => e.city == cityQuery);
             return Ok(stores);
         }
+
+        [NonAction]
         public List<Drink> GetDrinks(int store_id)
         {
             var allDrinks = db.Drinks.Where(e => e.store_id == store_id);
