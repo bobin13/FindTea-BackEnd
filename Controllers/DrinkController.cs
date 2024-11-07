@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FindTeaBackEnd.Database;
+using FindTeaBackEnd.Handlers;
 using FindTeaBackEnd.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +8,7 @@ namespace FindTeaBackEnd.Controllers
     [Route("api/[controller]")]
     public class DrinkController : ControllerBase
     {
-        AppDb db = new();
+        DB db = new DB();
 
         [HttpPost]
         public async Task<IActionResult> AddDrinkToStore([FromBody] DrinkDTO drinkDto)
