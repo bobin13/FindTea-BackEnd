@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using sheridan_connect_backend;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,11 +23,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors("AcceptAllPolicy");
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+//adding mongoDB creds to Environmental Variables
+var root = Directory.GetCurrentDirectory();
+var dotenv = Path.Combine(root, ".env");
+DotEnv.Load(dotenv);
 
 app.UseHttpsRedirection();
 

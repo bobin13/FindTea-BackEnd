@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FindTeaBackEnd.Database;
 using FindTeaBackEnd.Handlers;
-using FindTeaBackEnd.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FindTeaBackEnd.Controllers
@@ -14,16 +8,15 @@ namespace FindTeaBackEnd.Controllers
     public class TestController : ControllerBase
     {
 
-        readonly AppDb db = new();
+        DB db = new();
 
         [HttpGet]
         public IActionResult GetStoresByCity(string cityQuery)
         {
 
             Console.WriteLine(cityQuery);
-            DbSQL db = new();
-            string temp = db.GetStoresByCity(cityQuery);
-            return Ok(temp);
+
+            return Ok();
         }
 
 

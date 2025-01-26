@@ -26,8 +26,8 @@ namespace FindTeaBackEnd.Controllers
                 is_registered = drinkDto.is_registered
 
             };
-            await db.Drinks.AddAsync(drink);
-            await db.SaveChangesAsync();
+            //await db.Drinks.AddAsync(drink);
+            //await db.SaveChangesAsync();
 
             return Ok(drink);
         }
@@ -35,9 +35,9 @@ namespace FindTeaBackEnd.Controllers
         [HttpGet("drinks")]
         public IActionResult GetDrinksByStore([FromQuery] int id)
         {
-            var drinks = db.Drinks.Where(e => e.id == id);
+            //var drinks = db.Drinks.Where(e => e.id == id);
 
-            return Ok(drinks);
+            return Ok();
         }
     }
 }
