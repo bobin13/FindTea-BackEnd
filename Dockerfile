@@ -23,4 +23,4 @@ COPY --from=build /app/publish .
 EXPOSE 80
 
 # Define the entry point for the container
-ENTRYPOINT ["dotnet", "FindTeaBackEnd.dll"]
+ENTRYPOINT ["dotnet", "FindTeaBackEnd.csproj"]
