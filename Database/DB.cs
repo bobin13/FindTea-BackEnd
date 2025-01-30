@@ -13,9 +13,13 @@ namespace FindTeaBackEnd.Handlers
     {
         string dbName = "tims_app";
 
+
         //returns a collectioin as a list whose name is passed.
         public string GetConnectionString()
         {
+            var root = Directory.GetCurrentDirectory();
+            var dotenv = Path.Combine(root, ".env");
+            DotEnv.Load(dotenv);
             var username = Environment.GetEnvironmentVariable("USERNAME");
             var password = Environment.GetEnvironmentVariable("PASSWORD");
 
