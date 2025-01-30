@@ -27,7 +27,7 @@ namespace FindTeaBackEnd.Controllers
 
 
         [HttpGet("id/{id}")]
-        public IActionResult GetStoreById([FromBody] ObjectId id)
+        public IActionResult GetStoreById(string id)
         {
             // string salt = Encrypt.GenerateSalt(13);
             // string hash = Encrypt.GenerateHash(salt, "bobin1314ist");
@@ -36,7 +36,7 @@ namespace FindTeaBackEnd.Controllers
             // if (id == 0)
             //     return NotFound("No Store Found!");
 
-            var filter = Builders<Store>.Filter.Eq("_id", id);
+            var filter = Builders<Store>.Filter.Eq("_id", ObjectId.Parse(id));
             var store = db.GetCollection<Store>("stores").Find(filter).FirstOrDefault();
 
             return Ok(store);

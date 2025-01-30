@@ -13,7 +13,7 @@ namespace FindTeaBackEnd.Models
         public string address { get; set; }
         public string address_hint { get; set; }
         public double rating { get; set; }
-
+        public string store_name { get; set; }
         public string thumbnailURL { get; set; }
         public List<Drink> drinks { get; set; }
 
