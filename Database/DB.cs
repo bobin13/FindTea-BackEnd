@@ -18,6 +18,7 @@ namespace FindTeaBackEnd.Handlers
         public string GetConnectionString()
         {
             var root = Directory.GetCurrentDirectory();
+            Console.WriteLine(root);
             var dotenv = Path.Combine(root, ".env");
             DotEnv.Load(dotenv);
             var username = Environment.GetEnvironmentVariable("USERNAME");
