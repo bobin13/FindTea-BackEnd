@@ -17,10 +17,10 @@ namespace FindTeaBackEnd.Handlers
         //returns a collectioin as a list whose name is passed.
         public string GetConnectionString()
         {
-            // var root = Directory.GetCurrentDirectory();
-            // Console.WriteLine(root);
-            // var dotenv = Path.Combine(root, ".env");
-            DotEnv.Load(".env");
+            var root = Directory.GetCurrentDirectory();
+            Console.WriteLine(root);
+            var dotenv = Path.Combine(root, ".env");
+            DotEnv.Load(dotenv);
             var username = Environment.GetEnvironmentVariable("USERNAME");
             var password = Environment.GetEnvironmentVariable("PASSWORD");
 
