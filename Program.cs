@@ -25,9 +25,9 @@ app.UseCors("AcceptAllPolicy");
 // Configure the HTTP request pipeline.
 
 //adding mongoDB creds to Environmental Variables
-// var root = Directory.GetCurrentDirectory();
-// var dotenv = Path.Combine(root, ".env");
-// DotEnv.Load(dotenv);
+var root = Directory.GetCurrentDirectory();
+var dotenv = Path.Combine(root, ".env");
+DotEnv.Load(dotenv);
 
 app.UseHttpsRedirection();
 
